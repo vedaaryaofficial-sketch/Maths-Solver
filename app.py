@@ -3,10 +3,10 @@ import google.generativeai as genai
 
 st.title("Vedaarya Math Bot 🤖")
 
-# Apni API KEY yahan daalein (Bina space ke)
-api_key = "AQ.Ab8RN6Io-xAGUPNvx2OF2JqwsS9WfWB-b-4r9PDqSIDPRNf7oQ"
-
+# Yeh 'secrets' se key uthayega
+api_key = st.secrets["GOOGLE_API_KEY"]
 genai.configure(api_key=api_key)
+
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 user_input = st.text_input("Apna Math sawaal yahan likhein:")
