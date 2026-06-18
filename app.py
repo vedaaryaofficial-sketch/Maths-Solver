@@ -3,11 +3,12 @@ import google.generativeai as genai
 
 st.title("Vedaarya Math Bot 🤖")
 
-# API key ko direct code mein mat likhein
+# Streamlit Secrets se key lein
 api_key = st.secrets["GOOGLE_API_KEY"]
 genai.configure(api_key=api_key)
 
-model = genai.generativeai.GenerativeModel('gemini-1.5-flash')
+# Sahi code: 'genai.' ke baad seedha 'GenerativeModel'
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 user_input = st.text_input("Apna Math sawaal yahan likhein:")
 
